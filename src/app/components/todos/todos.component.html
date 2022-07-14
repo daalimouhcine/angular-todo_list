@@ -1,4 +1,13 @@
 <div class="todos">
+  <form>
+    <input type="text"
+           name="inputTodo"
+           id="inputTodo"
+           placeholder="Enter Todo..."
+           class="todo-input"
+    >
+    <input type="submit" value="Add Todo" class="todo-submit">
+  </form>
   <div class="todo {{ todo.completed && 'done'}}" *ngFor="let todo of todos; let i = index" (click)="toggleCopletion(i)" >
     <div class="id">{{ i }}</div>
     <div class="content">{{ todo.content }}</div>
