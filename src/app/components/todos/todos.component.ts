@@ -33,4 +33,14 @@ export class TodosComponent implements OnInit {
     this.todos.splice(id,1);
   }
 
+  addTodo () {
+    if(this.inputTodo) {
+      this.todos.push({
+        content: this.inputTodo,
+        completed: false
+      });
+      this.inputTodo = "";
+    }
+  }
+
 }
