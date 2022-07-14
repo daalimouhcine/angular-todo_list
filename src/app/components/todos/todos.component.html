@@ -1,7 +1,7 @@
 <div class="todos">
-  <div class="todo" *ngFor="let todo of todos; let i = index">
+  <div class="todo {{ todo.completed && 'done'}}" *ngFor="let todo of todos; let i = index" (click)="toggleCopletion(i)" >
     <div class="id">{{ i }}</div>
     <div class="content">{{ todo.content }}</div>
-    <button class="delete">Remove</button>
+    <button class="delete" (click)="removeTodo(i)">Remove</button>
   </div>
 </div>
