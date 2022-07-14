@@ -24,4 +24,12 @@ export class TodosComponent implements OnInit {
     ]
   }
 
+  toggleCopletion (id:number):void {
+    this.todos[id].completed = !this.todos[id].completed;
+  }
+
+  removeTodo (id:number):void {
+    this.todos.splice(id,1);
+  }
+
 }
